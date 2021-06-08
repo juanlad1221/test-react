@@ -1,20 +1,6 @@
-import { createContext, useState } from "react";
-import axios from 'axios'
-//Importo la data
+import { createContext, useState, useEffect } from "react";
+//Fuente de dato local
 import Data from '../data/data'
-
-
-//Funciones
-let du = axios.get('https://pokeapi.co/api/v2/pokemon/ditto')
-  .then(function (response) {
-    // handle success
-    console.log(response);
-  })
-  .catch(function (error) {
-    // handle error
-    console.log(error);
-  })
-
 
 
 
@@ -25,11 +11,29 @@ export const Context = createContext();
 
 //Componente que devuelve el provider
 const DataContext = ({ children }) => {
+
   //Data a usar en la tabla
   const [data, setData] = useState(Data)
-  console.log(du)
 
+  /*Fuente de datos api NO USAR falta crearla...
+  const getData = async () => {
+    try {
+      let res = await fetch('https://api-test-1.juancarlosca374.repl.co/api-25');
+      let datos = await res.json();
+      //console.log(datos)
+      setData(datos)
+    }
+    catch(err){
+      console.log(err)
+    }
+  }
+  //Despues de montarse el componente
+  useEffect(() => {
+    getData()
+  },[])*/
 
+  
+  
   return (
     <Context.Provider value={{ data, setData }}>
         {children}

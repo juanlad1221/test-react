@@ -16,7 +16,7 @@ import Bar from '../Bar/Bar'
 const Table = () => {
   //Se trae la data del context
   const { data, setData } = useContext(Context)
-  
+ 
 
   //Objeto que referencia la data con su setData
   const dataTableFuncMap = {
@@ -56,7 +56,6 @@ const Table = () => {
   }
   const onRowEditInit = (event) => {
     originalRows[event.index] = { ...data[event.index] };
-    console.log(originalRows)
   }
 const onRowEditCancel = (event) => {
     let products = [...data];

@@ -8,7 +8,7 @@ Clonar en el repositorio, instalar dependencias y probarlo en un entorno local, 
 
 ## Uso 2
 
-Acceder a: 
+Acceder a: https://test-ks-juan.herokuapp.com/
 Y probarlo de manera on-line, opción 2.
 
 
